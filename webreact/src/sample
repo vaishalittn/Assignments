@@ -1,0 +1,14 @@
+class Registration extend React.component{
+    constructor(){
+        this.state{
+                    firstname: null,
+                    lastname: null,
+                    emailid: null,
+                    mobileno:null,
+                    gender:female
+        }
+    }
+onInputChange(e){
+        this.setState({username})
+    }
+}

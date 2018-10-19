@@ -1,0 +1,211 @@
+    		<!DOCTYPE html>
+    		<html>
+    		<head><title>Login Form</title>
+              <style type="text/css">
+              h1{
+                margin-left: 100px;
+                margin-top:30px;
+                font-family: Arial, Helvetica, sans-serif;
+                color: darkcyan;
+            }
+            nav{
+                float:right;
+                margin-top:-20px;
+                margin-right: 100px;
+                color:darkcyan;
+            }
+            hr{
+                margin-left:100px;
+                margin-right: 100px;
+                margin-top:50px;
+            }
+            body{
+             font-family: serif;
+         }
+         fieldset {
+             text-align: left;
+             vertical-align: top;
+             margin: 0 auto;
+             width: 500px;
+             padding: 0px 0px 0px; 
+             border-style: solid;
+             border-radius: 8px;
+         }
+         .header{
+             background-color: rgba(128,128,128,0.5);
+             border-collapse: 100px;
+             padding: 15px;
+             color: white;
+             
+         }
+         .section{
+             padding: 20px;
+             text-align: left;
+         }
+         .footer{
+             background-color: rgba(128,128,128,0.2);
+             border-collapse: 100px;
+             padding: 25px;
+             color: white;
+             text-align: right;
+         }
+         .round{
+             border-radius:8px;
+             width: 450px;		
+             height: 25px;
+         }
+         #version{ 
+             width: 100px;
+         }
+         #description{
+          height: 50px;
+      }
+      #send{
+         border-radius:8px;
+         background-color: rgba(18,190,121,0.7);
+         height: 38px;
+         width: 60px;
+         color: white;
+     }
+     #os, #product, #severity{
+         background-color: rgba(18,190,121,0.7);
+         color: white;
+     }
+     
+     .file-upload{
+       display:block;
+       text-align:center;
+       font-family: Helvetica, Arial, sans-serif;
+       font-size: 12px;
+   }
+   .file-upload .file-select{
+    display:block;
+    border: 2px solid #dce4ec;
+    color: #34495e;
+    cursor:pointer;
+    height:40px;
+    line-height:40px;
+    text-align:left;
+    background:#FFFFFF;
+    overflow:hidden;
+    position:relative;
+}
+.file-upload .file-select .file-select-button{
+    background:#dce4ec;
+    padding:0 10px;
+    display:inline-block;
+    height:40px;
+    line-height:40px;
+}
+.file-upload .file-select .file-select-name{
+    line-height:40px;
+    display:inline-block;
+    padding:0 10px;
+}
+.file-upload.active .file-select{
+    border-color:#3fa46a;
+    transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;-webkit-transition:all .2s ease-in-out;
+    -o-transition:all .2s ease-in-out;
+}
+.file-upload.active .file-select .file-select-button{
+    background:#3fa46a;
+    color:#FFFFFF;
+    transition:all .2s ease-in-out;
+    -moz-transition:all .2s ease-in-out;
+    -webkit-transition:all .2s ease-in-out;
+    -o-transition:all .2s ease-in-out;
+}
+.file-upload .file-select input[type=file]{
+    z-index:100;
+    cursor:pointer;
+    position:absolute;
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    opacity:0;
+    filter:alpha(opacity=0);
+}
+.file-upload .file-select.file-select-disabled{
+    opacity:0.65;
+}
+</style>
+</head>
+<body>
+   <h1>TO THE NEW</h1>
+   <nav>
+    <a>Home</a>
+    <a>Quick Help</a>
+</nav>
+<hr>
+<fieldset>
+ <div>
+     <div class="header"><h2>Bug Report</h2></div>
+     <div class="section">
+       <form>		
+           <p>  
+            <label for = "title">Title:* </label><br/>
+            <input type = "text" id ="title" class="round" required></p>
+            
+            <p><label for = "description">Description: </label>  <br />
+                <input type="textarea" id="description" class="round"required></p> 
+                
+                
+                <p><label for="os">Operating System:</label> <br/>
+                 <select id="os" class="round">
+                    <option>Windows XP</option>
+                    <option>Windows 7</option>
+                    <option>Windows 8</option>
+                    <option>Windows 10</option>
+                    <option>Ubuntu</option>
+                    <option>Linux</option>
+                </select></p>
+                
+                <p><label for="product">Product:*</label> <br />
+                 <select id="product" class="round" required>
+                    <option>Microsoft Forms</option>
+                    <option>JotForm</option>
+                    <option>123ContactForm</option>
+                    <option>FormSite</option>
+                    <option>Leadformly</option>
+                    <option>EmailMeForm</option>
+                    <option>Paperform</option></select></p>
+                    
+                    <p> <label for="version">Version:*<label/> <br />
+                     <input type="text" id="version" class="round" required></p>
+                     
+                     <p><label for="license">License:*</label><br/>
+                         <input type = "radio" name = "License" value = "Free"> Free
+                         <input type = "radio" name = "License" value = "Business"> Business</p>     
+                         
+                         <p><label for ="severity">Severity:</label> <br />
+                             <select id="severity" class="round">
+                                <option>Critical</option>
+                                <option>Major</option>
+                                <option>Minor</option>
+                                <option>Trivial</option>
+                            </select></p>
+                            
+                            <p><label for="attachment">Attachments:</label> <br />
+                             <div class="file-upload">
+                                <div class="file-select">
+                                    <div class="file-select-button" id="fileName" style="float: right">Choose File</div>
+                                    <div class="file-select-name" id="noFile">No file chosen...</div> 
+                                    <input type="file" name="chooseFile" id="chooseFile">
+                                </div>
+                            </div>
+                            <br/>
+                        </p>
+                    </div>
+
+                    <div class="footer">
+
+                      <button type="submit" value="send" id="send">Send</button><br/>
+                      
+                  </div>
+              </form>
+
+          </fieldset>
+      </div>
+  </body>
+  </html>

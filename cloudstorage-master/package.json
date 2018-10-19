@@ -1,0 +1,17 @@
+{
+  "name": "cloudstorage-master",
+  "version": "1.0.0",
+  "description": "Repository for handling document storage to cloud with user authentication using openstack swift,nodejs,mysql and reactjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,116 @@
+﻿Answer 1 :    mkdir -p exercise/dir1/dir2/dir3
+  
+
+(Screenshot depicting dir3 along with the path.)
+
+
+
+
+Answer 2 :   touch emptyfile1.txt emptyfile2.txt
+                     
+
+
+
+
+Answer 3 : Following are the series of command to execute
+                 touch file1.txt
+                 vim file1.txt
+                 Do Insert mode
+                 Write  Hello World
+                 Press ESC
+                 Write wq (save and exit)
+  
+
+
+
+
+
+
+
+Answer 4 :  find /etc/passwd
+                   Cp /etc/passwd ~/
+                   Mv passwd ~/ passwd_backup
+   
+
+
+Answer 5 : 
+5.1 - cat passwd_backup
+  
+
+5.2 - less passwd_backup
+  
+
+
+
+5.3 - More passwd_backup
+  
+
+
+
+5.4 - String passwd_backup
+
+
+                    
+
+
+
+
+Answer 6 : cat passwd_backup | grep /bin/false | wc -l    
+
+
+
+
+
+
+Answer 7 :  head -n5 passwd_backup >> output.txt   
+
+
+Answer 8 :  sudo useradd test
+                    Passwd test
+Su test
+Id
+   
+
+
+
+
+Answer 9 : touch -d "2 hours ago"  emptyFile{1..2}
+
+
+
+
+Answer 10 : 
+
+
+Answer 11 : alias vaishali = '/tmp/aliastesting'
+
+
+Answer 12 : 
+Answer 13 : sudo apt-get install zip
+
+
+Answer 14 : tar -cvf abc.tar.gz output.txt passwd_backup
+  
+
+
+
+Answer 15 scp abc.tar.gz test@vaishali
+Answer 16 : 
+
+
+
+
+Answer 17 :  wget https://www.google.co.in/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png && mv googlelogo_color_272x92dp.png ~/Desktop
+
+
+
+
+Answer 18 : command --help
+  
+
+
+
+Answer 19 :  ln -s /etc/services  /tmp/ports-info
+
+
+Answer 20 : whereIs xyz

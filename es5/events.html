@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+    *{
+        margin: 0 auto;
+        padding: 0;
+        width: 500px;
+        text-align: center;
+    }
+    .container{
+        background-color: blue;
+        padding: 30px;
+    }
+    .first-child{
+        background-color: red;
+        padding: 10px 0px;
+    }
+    #second-child{
+        background-color: yellow;
+        list-style: none;
+        padding: 5px 0px;
+    }
+    a{
+    font-size: 20px;
+    }
+</style>
+<body>
+    <div class="container" onclick="container();">
+        I am a div container.Click me to see an alert.
+        <p class="first-child" onclick="firstchild();">
+            That's right Im a parah.I have two list item.
+            <ul id="second-child">
+                <li>list item1</li>
+                <li>list item2</li>
+            </ul>
+        </p>
+    </div>
+    <a href="www.google.com" id="anchor">Google it</a>
+    <button id=btn onclick="stopImmediatePropagation();">stopImmediatePropagation</button>
+    <script>
+        
+           document.getElementById("second-child").addEventListener("click", function(event){
+           event.stopPropagation()
+           alert("You've clicked list items!");
+           });
+
+           function firstchild(event){
+           alert("You've clicked parah!");
+           }
+
+           function container(){
+           alert("You've clicked div container!");
+           }
+           document.getElementById("anchor").addEventListener("click", function(event){
+           event.preventDefault()
+           });
+          
+           function stopImmediatePropagation(event){
+           alert("Alert1!");
+           event.stopImmediatePropagation()
+           alert("Alert2!");
+           }
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Area of a circle</title>
+</head>
+<body>
+  <script language="JavaScript">
+    function CalculateArea(){
+        var radius =document.getElementById("txtRadius").value;
+        alert("The area of the circle is " + radius * radius * Math.PI);
+    }
+    </script>
+    <div style="text-align: center; padding: 30px;">
+        <h3>Enter the radius of circle:</h3>
+       <input type="text" id="txtRadius" size="10">
+       <input type="button" value="Calculate" onClick="CalculateArea();">  
+    </div>
+</script>
+</body>
+</html>

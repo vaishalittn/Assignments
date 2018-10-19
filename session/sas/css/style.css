@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+header {
+  color: #5cbf9c;
+  padding: 15px;
+  border-bottom: 1px solid #5cbf9c; }
+  header h1 {
+    display: inline-block; }
+  header nav {
+    float: right;
+    padding: 10px; }
+
+.content {
+  margin: 0 auto;
+  width: 500px;
+  padding: 33px; }
+  .content h2 {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: #808080;
+    color: white;
+    padding: 27px;
+    margin: auto;
+    text-align: center; }
+  .content form {
+    padding: 20px;
+    border: 1px solid black; }
+    .content form .round input, .content form .round textarea, .content form .license {
+      border-radius: 7px;
+      padding: 5px;
+      display: block;
+      width: 97%; }
+    .content form .round select {
+      border-radius: 7px;
+      padding: 5px;
+      display: block;
+      width: 97%;
+      background-color: #5cbf9c; }
+    .content form .round, .content form .versionlabel, .content form .license {
+      margin: 20px; }
+    .content form #version {
+      border-radius: 7px;
+      padding: 5px;
+      display: block; }
+    .content form #file {
+      display: inline-block;
+      padding: 10;
+      padding-left: 20px; }
+  .content .submit {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: #808080;
+    color: white;
+    padding: 27px;
+    margin: auto; }
+    .content .submit #send {
+      float: right;
+      clear: both;
+      border-radius: 7px;
+      padding: 3px;
+      background-color: #5cbf9c;
+      color: white; }
+
+/*# sourceMappingURL=style.css.map */

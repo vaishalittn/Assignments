@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+
+$(document).ready(function () {
+$('button').click(function(){
+$("body").append("<button id='btn'>click me to show an alert</button>"); 
+});
+
+//this works on a dynamically created element
+$("body").on("click",'#btn', function(){
+alert("This will show up if on click is working...!");
+});
+
+
+// this won't work on a dynamically created element
+$("#btn").click( function(){
+alert("This must not work...!");
+});
+
+
+
+}); 
+</script>
+</head>
+<body><button id="button">Click me</button>
+</body>
+</html>

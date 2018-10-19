@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<script type="text/javascript">
+var dataOfEmployee = [    
+    {
+        name:"X",
+        age:21,
+        salary:4000,
+        DOB:"12/12/1997"
+    },
+  {
+        name:"Y",
+        age:21,
+        salary:43213,
+        DOB:"25/05/1997"
+  },
+    {
+        name:"Z",
+        age:22,
+        salary:2500,
+        DOB:"1/03/1996"
+    },
+    {
+        name:"A",
+        age:34,
+        salary:6000,
+        DOB:"11/12/1984"
+    },
+    {
+        name:"B",
+        age:30,
+        salary:900,
+        DOB:"12/04/1988"
+    },
+    {
+        name:"C",
+        age:50,
+        salary:300,
+        DOB:"12/12/1968"
+    },
+  {
+        name:"D",
+        age:30,
+        salary:9400,
+        DOB:"12/07/1988"
+    }
+];
+function syntaxHighlight(json) {
+    if (typeof json != 'string') {
+         json = JSON.stringify(json, undefined, 2);
+    }
+    json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+        var cls = 'number';
+        if (/^"/.test(match)) {
+            if (/:$/.test(match)) {
+                cls = 'key';
+            } else {
+                cls = 'string';
+            }
+        } else if (/true|false/.test(match)) {
+            cls = 'boolean';
+        } else if (/null/.test(match)) {
+            cls = 'null';
+        }
+        return '<span class="' + cls + '">' + match + '</span>';
+    });
+}
+//output(syntaxHighlight(dataOfEmployee));
+var salarys = dataOfEmployee.filter(filterBySalary);
+function filterBySalary(item) {
+  if (item.salary>5000){
+    return true;
+  }
+  return false; 
+}
+console.log("Filtered By Salary list = ")
+console.log(salarys);
+console.log("-----------------------------------------------------");
+var groupBy = function(xs, key) {
+  return xs.reduce(function(rv, x) {
+    (rv[x[key]] = rv[x[key]] || []).push(x);
+    return rv;
+  }, {});
+};
+var aged = groupBy(dataOfEmployee,'age');
+console.log("GroupedBy list = ")
+console.log(aged);
+console.log("-----------------------------------------------------");
+function increaseSalary(data){
+  var listOfIncreasedSalary = data;
+for(var i in listOfIncreasedSalary){
+  var o = listOfIncreasedSalary[i];
+  if(o.salary<1000 && o.age>20){
+    listOfIncreasedSalary[i].salary *=5; 
+  }
+}
+  return listOfIncreasedSalary;
+}
+
+var increasedSalary = increaseSalary(dataOfEmployee);
+console.log("Salary after incrementing = ")
+  console.log(increasedSalary);
+
+</script>
+<body>
+
+</body>
+</html>

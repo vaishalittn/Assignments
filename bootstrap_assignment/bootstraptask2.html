@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task2</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+    	h6{color: grey;display: inline-block}
+    	h5{display: inline-block}
+    	.Grails{display: inline-block;float: right;margin-right: 5%}
+    	#heading{background-color: #d9d9d9}
+    	#searchinput {
+            width: 200px;
+            border-radius: 15px
+        }
+        #searchclear {
+            position: absolute;
+            right: 5px;
+            top: 0;
+            bottom: 0;
+            height: 14px;
+            margin: auto;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        #searchsign {
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            height: 14px;
+            margin: auto;
+            font-size: 14px;
+            cursor: pointer;
+        }
+       }
+
+    </style>
+</head>
+
+<body>
+<!-- Page Header -->
+<div class="panel panel-default" style="border-radius: 2%">
+    <div class="panel-body">
+        <a href="#">Link sharing</a>
+        <div class="btn-group" style="float: right;">
+            <span id="searchsign" class="glyphicon glyphicon-search"></span>
+            <input id="searchinput" type="search" class="form-control" placeholder="search" style="padding-left: 30px">
+            <span id="searchclear" class="glyphicon glyphicon-remove-circle"></span>
+        </div>
+    </div>    
+</div>
+
+<div class="row" style="margin-left: 5%;margin-right: 5%">
+	<div class="col-md-7">
+	    <div class="panel panel-default">
+            <div class="panel-heading" id="heading"><label>Recents Posts</label></div>
+            <div class="panel-body">
+                <div class="media">
+                    <div class="media-left media-top">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjJWCY2isrVKaiIZxXWPfgj-SM3YKs1wyDuf0a7GvgJe0-owG_" class="media-object" style="width:100px;;height:100px;border: 1px solid black">
+                    </div>
+                    <div class="media-body">
+                        <h5 class="media-heading">Vaishali</h5>
+                        <h6>@vaishali 5min</h6>
+                        <a href="#" class="Grails"><u>Grails</u></a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;<span class="glyphicon glyphicon-heart"></span>&nbsp;<span class="glyphicon glyphicon-envelope"></span><a href="" style="margin-left: 75%"><u><u>view post</u></u></a>
+                   </div>
+                </div><br>
+                <div class="media">
+                    <div class="media-left media-top">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjJWCY2isrVKaiIZxXWPfgj-SM3YKs1wyDuf0a7GvgJe0-owG_" class="media-object" style="width:100px;height:100px;border: 1px solid black">
+                    </div>
+                    <div class="media-body">
+                        <h5 class="media-heading">Vaishali</h5>
+                        <h6>@vaishali 10min</h6>
+                        <a href="#" class="Grails"><u>Grails</u></a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;<span class="glyphicon glyphicon-heart"></span>&nbsp;<span class="glyphicon glyphicon-envelope"></span><a href="" style="margin-left: 75%"><u><u>view post</u></u></a>
+                   </div>
+                </div>
+            </div>
+        </div>
+	</div>
+
+    <!--  Login form -->
+	<div class="col-md-5">
+	    <div class="panel panel-default">
+            <div class="panel-heading" id="heading"><label>Login</label></div>
+            <div class="panel-body">
+            	<form action="" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-sm-5" for="email">Email address:</label>
+                        <div class="col-sm-7">
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-5" for="pwd">Password:</label>
+                        <div class="col-sm-7">
+                             <input type="password" class="form-control" id="pwd">
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <a href="#" class="col-sm-6">Forgot Password</a>
+                        <div class="col-sm-6">
+                            <input type="submit" class="btn btn-default" value="Login" style="float: right; background-color: #d9d9d9">
+                        </div>
+                     </div>
+                </form> 
+            </div>
+        </div>
+	</div>
+
+</div>
+
+<!--  Top Posts -->
+<div class=row style="margin-left: 5%;margin-right: 5%">
+	<div class="col-md-7">
+	    <div class="panel panel-default">
+            <div class="panel-heading" id="heading">
+            <label>Top Posts</label>
+            <select class="form-control" style="float: right;width: 100px">
+            	        <option>Today</option>
+            	        <option>1 week</option>
+            	        <option>1 month</option>
+            	        <option>1 year</option>
+            </select>
+            </div>
+            <div class="panel-body">
+                <div class="media">
+                    <div class="media-left media-top">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjJWCY2isrVKaiIZxXWPfgj-SM3YKs1wyDuf0a7GvgJe0-owG_" class="media-object" style="width:100px;;height:100px;border: 1px solid black">
+                    </div>
+                    <div class="media-body">
+                        <h5 class="media-heading">Vaishali</h5>
+                        <h6 style>@vaishali 5min</h6>
+                        <a href="#" class="Grails"><u>Grails</u></a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;<span class="glyphicon glyphicon-heart"></span>&nbsp;<span class="glyphicon glyphicon-envelope"></span><a href="" style="margin-left: 75%"><u><u>view post</u></u></a>
+                   </div>
+                </div>
+            </div>
+        </div>
+	</div>
+
+	<!--  Register form  -->
+	<div class="col-md-5">
+	    <div class="panel panel-default">
+            <div class="panel-heading" id="heading"><label>Register</label></div>
+            <div class="panel-body">
+            	<form action="" class="form-horizontal">
+                    <div class="form-group">
+                        <label for="email" class="control-label col-sm-5">First Name:</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" id="email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd" class="control-label col-sm-5">Last Name:</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" id="pwd">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd" class="control-label col-sm-5">Email:</label>
+                        <div class="col-sm-7">
+                        <input type="email" class="form-control" id="pwd">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd" class="control-label col-sm-5">Username:</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" id="pwd">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd" class="control-label col-sm-5">Password:</label>
+                        <div class="col-sm-7">
+                        <input type="password" class="form-control" id="pwd">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd" class="control-label col-sm-5">Confirm Password:</label>
+                        <div class="col-sm-7">
+                        <input type="password" class="form-control" id="pwd">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="photo" class="control-label col-sm-5">Photo:</label>
+                        <div class="col-sm-7">
+                <span> <input type="file" id="pwd" value="browse"></span>
+                 </div>
+                    </div>
+                    <button type="submit" class="btn btn-default" style="float: right; background-color: #d9d9d9">Register</button>
+                </form> 
+            </div>
+        </div>
+	</div>
+
+</div>
+
+</body>
+</html>

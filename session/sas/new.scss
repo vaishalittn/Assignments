@@ -1,0 +1,102 @@
+*{
+  margin:0;
+  padding:0;
+}
+@mixin background-color()
+{
+  background-color:#808080;
+}
+
+@mixin display($display:inline-block)
+{
+  display:$display;
+}
+
+@mixin border()
+{
+  border:1px solid black;
+}
+@mixin padding($padding:20px)
+{
+  padding:$padding;
+}
+@mixin border-radius($radius:7px)
+{
+  border-radius:$radius;
+}
+@mixin h2()
+{
+  @include border;
+  border-collapse: collapse;
+  @include background-color;
+  color: white;
+  padding: 27px;
+  margin: auto;
+}
+@mixin textinput()
+{
+  @include border-radius;
+  padding: 5px;
+  @include display(block);
+  width: 97%;
+}
+      header {
+          color:#5cbf9c;
+          padding: 15px;
+          border-bottom: 1px solid #5cbf9c;
+          h1 {
+          @include display;
+          }
+          nav {
+          float: right;
+          padding: 10px;
+          }
+          }
+          .content{
+          margin: 0 auto;
+          width: 500px;
+          @include padding(33px);
+          h2 {
+          @include h2;
+          text-align: center;
+          }
+          form{
+          @include padding;
+          @include border;
+          .round input , .round textarea , .license {
+          @include textinput;
+          }
+          .round select{
+          @include border-radius;
+          padding: 5px;
+          @include display(block);
+          width: 97%;
+          background-color: #5cbf9c;
+          }
+          .round , .versionlabel , .license {
+          margin: 20px;
+          }
+          #version {
+          @include border-radius;
+          padding: 5px;
+          @include display(block);
+          }
+          #file {
+          @include display;
+          @include padding(10);
+          padding-left: 20px;
+          }
+          }
+          .submit{
+          @include h2;
+          #send{
+            float:right;
+            clear: both;
+            @include border-radius;
+            @include padding(3px);
+            background-color: #5cbf9c;
+            color:white;
+          }
+          }
+      }
+

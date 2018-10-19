@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login form</title>
+</head>
+<style type="text/css">
+*{
+        margin: 0;
+        padding: 0;
+        font-family: serif;
+     }
+header{
+        color:#5cbf9c;
+        margin: 20px 40px;
+        border-bottom: 1px solid #5cbf9c;
+
+    }
+h1{
+         display: inline-block;
+       }
+nav{
+         float: right;
+         margin-right: 20px;
+       }
+.content{
+        margin: 0 auto;
+        width: 500px;
+        border: 1px solid grey;
+        border-radius: 7px;
+        display: block;
+       }
+h2{
+        background-color: rgba(128,128,128,0.7);
+        color: white;
+        text-align: center;
+        padding: 20px;
+       }
+.round input , .round textarea , .license{
+       border-radius: 7px;
+       padding: 5px;
+       display: block;
+       width: 97%;
+       }
+.round select{
+       border-radius: 7px;
+       padding: 5px;
+       display: block;
+       width: 97%;
+       background-color: #5cbf9c;
+       }
+.round , .versionlabel , .license{
+       margin: 20px;
+    }
+#version{
+       border-radius: 7px;
+       padding: 5px;
+       display: block;
+    }
+.submit{
+        background-color: rgba(128,128,128,0.4);       
+        padding: 20px 35px 47px 0px;
+}
+#send{
+    float:right;
+    clear: both;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #5cbf9c;
+    color:white;
+}
+div.fileinputs {
+position: relative;
+margin: 20px;
+/*background-color: rgb(128,128,128);*/
+}
+
+div.fakefile {
+position: absolute;
+top: 0px;
+left: 0px;
+z-index: 1;
+}
+div .fakefile input{
+    width: 350px;
+    padding: 5px;
+}
+input.file {
+position: relative;
+text-align: right;
+-moz-opacity:0 ;
+filter:alpha(opacity: 0);
+opacity: 0;
+z-index: 2;
+}
+</style>
+<body>
+<header>
+        <h1>TO THE NEW</h1>
+            <nav>
+                <a>Home</a>
+                <a>Quick Help</a>
+            </nav>
+</header>
+<div class="content">
+    <h2>BUG REPORT</h2>
+    <form action="#" method="GET">
+        <div class="round">
+                <label for = "title">Title:* </label>
+                <input type = "text" id ="title" pattern="[A-Za-z]" required>
+        </div>
+        <div class="round">
+                <label for = "description">Description: </label>
+                <textarea rows="3" cols="30" id="description"></textarea>
+        </div>
+        <div class="round">
+            <label for="os">Operating System:</label> <br/>
+                    <select id="os">
+                        <option>Windows XP</option>
+                        <option>Windows 10</option>
+                        <option>Ubuntu</option>
+                    </select>
+        </div>
+        <div class="round">
+            <label for="product">Product:*</label>
+                    <select id="product" required>
+                        <option>Microsoft Forms</option>
+                        <option>FormSite</option>
+                        <option>Leadformly</option>
+                        <option>EmailMeForm</option>
+                        <option>Paperform</option></select>
+        </div>
+        <div class=versionlabel>
+            <label for="version">Version:<label/>
+            <input type="text" id="version" placeholder="18.2" readonly>
+        </div>
+        <div class="license">
+            <label for="license">License:*</label>
+            <input  id="license" type = "radio" name = "License" value = "Free" checked> Free
+            <input  id="license" type = "radio" name = "License" value = "Business"> Business     
+        </div>
+        <div class="round">
+            <label for ="severity">Severity:</label>
+                    <select id="severity">
+                        <option>Critical</option>
+                        <option>Major</option>
+                        <option>Minor</option>
+                        <option>Trivial</option>
+                    </select>
+        </div>
+        <div class="fileinputs" >
+                <input type="file" class="file" />
+                <div class="fakefile">
+                <input disabled/><span>Choose file</span>
+        </div>
+        </div>
+        <!-- <div class="fileinputs">
+             <input type="file" class="file" />
+          <div class="fakefile">
+             <input style="padding: 5px; width: 350px;" /><span style=" background-color:rgba(128,128,128,0.5); padding:7px;"><strong>Choose file</strong></span></div>
+        </div> -->
+        <div class="submit">
+        <button type="submit" value="send" id="send">Send</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+
+fieldset{
+  border: 5px solid-black; 
+}
+#firstrow{
+	float: left;
+	display: block;
+}
+#secondrow{
+	float: right;
+	display: block;
+}
+form{
+	display: inline;
+}

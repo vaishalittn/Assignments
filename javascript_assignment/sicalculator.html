@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>S.I. Calculator</title>
+
+        <script>
+            function calculate(key,value)
+            {
+                var amount = prompt("Please enter amount","");
+                var rate = prompt("Please enter rate","");
+                var years = prompt("Please enter years","");
+                result =  ("The interest is " + (amount*rate*years/100));
+                alert("Your Simple Interest is" + result);
+                }
+        </script>
+    </head>
+
+    <body>
+        <h3 style="text-align: center;">Click <button onclick="calculate();">Calculate</button> to calculate your Simple Interest:</h3>
+
+        
+    </body>
+</html>

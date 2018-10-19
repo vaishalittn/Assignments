@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login form</title>
+    <link rel="stylesheet" href="sas/css/style.css">
+</head>
+<body>
+<header>
+    <h1>TO THE NEW</h1>
+    <nav>
+        <a>Home</a>
+        <a>Quick Help</a>
+    </nav>
+</header>
+<div class="content">
+    <h2>BUG REPORT</h2>
+    <form action="#" method="GET">
+        <div class="round">
+            <label for = "title">Title:* </label>
+            <input type = "text" id ="title" pattern="[A-Za-z]" required>
+        </div>
+        <div class="round">
+            <label for = "description">Description: </label>
+            <textarea rows="3" cols="30" id="description"></textarea>
+        </div>
+        <div class="round">
+            <label for="os">Operating System:</label> <br/>
+            <select id="os">
+                <option>Windows XP</option>
+                <option>Windows 10</option>
+                <option>Ubuntu</option>
+            </select>
+        </div>
+        <div class="round">
+            <label for="product">Product:*</label>
+            <select id="product" required>
+                <option>Microsoft Forms</option>
+                <option>FormSite</option>
+                <option>Leadformly</option>
+                <option>EmailMeForm</option>
+                <option>Paperform</option></select>
+        </div>
+        <div class=versionlabel>
+            <label for="version">Version:<label/>
+                <input type="text" id="version" placeholder="18.2" readonly>
+        </div>
+        <div class="license">
+            <label for="license">License:*</label>
+            <input  id="license" type = "radio" name = "License" value = "Free" checked> Free
+            <input  id="license" type = "radio" name = "License" value = "Business"> Business
+        </div>
+        <div class="round">
+            <label for ="severity">Severity:</label>
+            <select id="severity">
+                <option>Critical</option>
+                <option>Major</option>
+                <option>Minor</option>
+                <option>Trivial</option>
+            </select>
+        </div>
+        <div id="round" >
+            <input type="file" id="file"/>
+        </div></form>
+        <div class="submit">
+            <button type="submit" value="send" id="send">Send</button>
+        </div>
+</div>
+</body>
+</html>

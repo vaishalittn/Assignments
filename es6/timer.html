@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+            width: 100px;
+        }
+        .container{
+            background-color: cyan;
+            padding: 50px;        
+            display: flex;
+            flex-flow: column-reverse;
+        }
+        p{
+            text-align: center;
+            padding: 10px 0px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+    <button type="button" onclick="clickme()"> Click me</button>
+    <p id="visiblenumber"> 0 </p></div>
+    <script type="text/javascript">
+        var timer=(function (){
+            var count = 1;
+            return function (){
+                return count++;
+            }
+        })();
+        function clickme(){
+            document.getElementById("visiblenumber").innerHTML = timer();
+        }
+    </script>
+<!-- var myMap=new Map();
+myMap.set(1,"sahil").set(2,"saurabh").set(3,"rishab");
+myMap.forEach((value,key,map)=>{
+  console.log(value,key);
+})
+ --></body>
+</html>

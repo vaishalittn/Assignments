@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task1</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        h4{margin-top: 0px;color: grey}
+        h5{display: inline-block;color: grey;margin-top: 0px;}
+        h6{display: inline-block;color: blue;margin-top: 0px;}
+        .Grails{display: inline-block;float: right;margin-right: 5%}
+        #heading{background-color: #d9d9d9}
+    	#searchinput {
+            width: 200px;
+            border-radius: 15px
+        }
+        #searchclear {
+            position: absolute;
+            right: 5px;
+            top: 0;
+            bottom: 0;
+            height: 14px;
+            margin: auto;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        #searchsign {
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            height: 14px;
+            margin: auto;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        #description{
+          height:90px;
+        }
+    </style>
+</head>
+<body>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <a href="">Link sharing</a>
+        <div style="float: right">
+        <div class="btn-group">
+            <span id="searchsign" class="glyphicon glyphicon-search"></span>
+            <input id="searchinput" type="search" class="form-control" placeholder="search" style="padding-left: 30px">
+            <span id="searchclear" class="glyphicon glyphicon-remove-circle"></span>
+        </div>&nbsp;
+        <span class="glyphicon glyphicon-comment" data-toggle="modal" data-target="#myModalCreateTopic"></span>
+        <span class="glyphicon glyphicon-envelope" data-toggle="modal" data-target="#myModalSendInvitation"></span>
+        <span class="glyphicon glyphicon-paperclip" data-toggle="modal" data-target="#myModalShareDocument"></span>
+        <span class="glyphicon glyphicon-file" data-toggle="modal" data-target="#myModalShareLink"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="glyphicon glyphicon-user"></span>
+        <select style="border: none;background-color: white">
+        	<option>vaishali</option>
+        	<option>profile</option>
+        	<option>users</option>
+        	<option>topics</option>
+        	<option>post</option>
+        	<option>logout</option>
+        </select>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="margin-left: 5%;margin-right: 5%">
+    <div class="col-md-5">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="media">
+                    <div class="media-left media-top">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjJWCY2isrVKaiIZxXWPfgj-SM3YKs1wyDuf0a7GvgJe0-owG_" class="media-object" style="width:100px;;height:100px;border: 1px solid black">
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">Vaishali</h3>
+                        <h4>@vaishali  </h4>
+                        <h5>  Subscription  </h5>
+                        <h5>  Posts</h5><br>
+                        <h6>18</h6>
+                        <h6 style="margin-left: 70px">50</h6>
+                   </div>
+                </div>
+            </div>
+    	</div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" id="heading">
+            <label>Subscriptions</label>
+            <a href="" style="float: right"><u>View All</u></a>
+            </div>
+            <div class="panel-body">
+                <div class="media">
+                    <div class="media-left media-top">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjJWCY2isrVKaiIZxXWPfgj-SM3YKs1wyDuf0a7GvgJe0-owG_" class="media-object" style="width:100px;;height:100px;border: 1px solid black">
+                    </div>
+                    <div class="media-body">
+                        <a href="" ><u>Grails</u></a><br><br>
+                        <h5>@vaishali</h5>
+                        <h5>Subscription</h5>
+                        <h5>Post</h5><br>
+                        <a href=""><h6><u>unsubscribe</u></h6></a>
+                        <h6 style="margin-left: 10px">18</h6>
+                        <h6 style="margin-left: 70px">50</h6><br>
+                        <div style="float: right;margin-right: 10px">
+                            <span class="glyphicon glyphicon-envelope"></span>&nbsp;<span class="glyphicon glyphicon-copy"></span>&nbsp;<span class="glyphicon glyphicon-trash"></span> 
+                        </div>
+                        <select class="form-control" style="width: 100px;float: right;margin-right: 10px">
+                            <option>Private</option>
+                            <option>Public</option>
+                        </select><span style="margin:5px";>&nbsp;</span>
+                        <select class="form-control" style="width: 100px;float: right">
+                            <option>Serious</option>
+                        </select>         
+                   </div>
+                </div>
+            </div><hr>
+
+            <div class="panel-body">
+                <div class="media">
+                    <div class="media-left media-top">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjJWCY2isrVKaiIZxXWPfgj-SM3YKs1wyDuf0a7GvgJe0-owG_" class="media-object" style="width:100px;;height:100px;border: 1px solid black">
+                    </div>
+                    <div class="media-body">
+                        <a href="" ><u>Grails</u></a><br><br>
+                        <h5>@vaishali</h5>
+                        <h5>Subscription</h5>
+                        <h5>Post</h5><br>
+                        <a href=""><h6><u>unsubscribe</u></h6></a>
+                        <h6 style="margin-left: 10px">18</h6>
+                        <h6 style="margin-left: 70px">50</h6><br>
+                        <div style="float: right">
+                            <span class="glyphicon glyphicon-envelope""></span>
+                        </div>
+                        <select class="form-control" style="width: 100px;float: right;margin-right: 20px">
+                            <option>Serious</option>
+                        </select>            
+                   </div>
+                </div>
+            </div>
+        </div>
+         <div class="panel panel-default">
+            <div class="panel-heading" id="heading">
+            <label>Trending Topics</label>
+            </div>
+            <div class="panel-body">
+                <div class="media">
+                    <div class="media-left media-top">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjJWCY2isrVKaiIZxXWPfgj-SM3YKs1wyDuf0a7GvgJe0-owG_" class="media-object" style="width:100px;;height:100px;border: 1px solid black">
+                    </div>
+                    <div class="media-body">
+                        <a href="" ><u>Grails</u></a><br><br>
+                        <h5>@vaishali</h5>
+                        <h5>Subscription</h5>
+                        <h5>Post</h5><br>
+                        <a href=""><h6><u>subscribe</u></h6></a>
+                        <h6 style="margin-left: 10px">18</h6>
+                        <h6 style="margin-left: 70px">50</h6><br>        
+                   </div>
+                </div>
+            </div><hr>
+               <div class="panel-body">
+                <div class="media">
+                    <div class="media-left media-top">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjJWCY2isrVKaiIZxXWPfgj-SM3YKs1wyDuf0a7GvgJe0-owG_" class="media-object" style="width:100px;;height:100px;border: 1px solid black">
+                    </div>
+                    <div class="media-body">
+                        <input type="text" placeholder="Grails" width="100px">
+                        <input type="submit" value="Save" style="display: inline-block;">
+                        <input type="submit" value="Cancel" style="display: inline-block;"><br>
+                        <h5>@vaishali</h5>
+                        <h5>Subscription</h5>
+                        <h5>Post</h5><br>
+                        <a href=""><h6><u>unsubscribe</u></h6></a>
+                        <h6 style="margin-left: 10px">18</h6>
+                        <h6 style="margin-left: 70px">50</h6><br>
+                        <div style="float: right;margin-right: 10px">
+                            <span class="glyphicon glyphicon-envelope"></span>&nbsp;<span class="glyphicon glyphicon-copy"></span>&nbsp;<span class="glyphicon glyphicon-trash"></span> 
+                        </div>
+                        <select class="form-control" style="width: 100px;float: right;margin-right: 10px">
+                            <option>Private</option>
+                            <option>Public</option>
+                        </select>
+                        <select class="form-control" style="width: 100px;float: right">
+                            <option>Serious</option>
+                        </select>         
+                   </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" id="heading">
+            <label>Send Invitation(Pop up)</label>
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal">
+                   <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Email*:</label>
+                      <div class="col-sm-10">
+                        <input type="email" class="form-control" id="email" placeholder="Email">
+                      </div>
+                    </div>
+                <div class="form-group">
+                <label class="control-label col-sm-2" for="topic">Topic:*</label>
+                <div class="col-sm-10">
+                    <select class="form-control">
+                        <option>Topic</option>
+                    </select>
+                </div>
+            </div>
+                <div class="form-group"> 
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default" style="background-color: #d9d9d9">Invite</button>
+                    <button type="submit" class="btn btn-default" style="background-color: #d9d9d9">Cancel</button>
+                      </div>
+                  </div>
+                  </form>                         
+        </div>
+    </div>
+    </div>
+
+    <div class="col-md-7">
+        <div class="panel panel-default">
+            <div class="panel-heading" id="heading"><label>Inbox</label></div>
+            <div class="panel-body">
+                <div class="media">
+                    <div class="media-left media-top">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjJWCY2isrVKaiIZxXWPfgj-SM3YKs1wyDuf0a7GvgJe0-owG_" class="media-object" style="width:100px;;height:100px;border: 1px solid black">
+                    </div>
+                    <div class="media-body">
+                        <h5 class="media-heading">Vaishali</h5>
+                        <h6>@vaishali 5min</h6>
+                        <a href="" class="Grails"><u>Grails</u></a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;<span class="glyphicon glyphicon-heart"></span>&nbsp;<span class="glyphicon glyphicon-envelope"></span><a href="" style="margin-left: 20%"><u>Download</u></a><a href="" style="display: inline-block;padding-left: 10px"><u>view full site</u></a><a href="" style="display: inline-block;padding-left: 10px"><u>mark as read</u></a><a href="" style="display: inline-block;padding-left: 10px"><u>view post</u></a>
+                   </div>
+                </div><hr>
+                <div class="media">
+                    <div class="media-left media-top">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjJWCY2isrVKaiIZxXWPfgj-SM3YKs1wyDuf0a7GvgJe0-owG_" class="media-object" style="width:100px;height:100px;border: 1px solid black">
+                    </div>
+                    <div class="media-body">
+                        <h5 class="media-heading">Vaishali</h5>
+                        <h6>@vaishali50min</h6>
+                        <a href="" class="Grails"><u>Grails</u></a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;<span class="glyphicon glyphicon-heart"></span>&nbsp;<span class="glyphicon glyphicon-envelope"></span><a href="" style="margin-left: 20%"><u>Download</u></a><a href="" style="display: inline-block;padding-left: 10px"><u>view full site</u></a><a href="" style="display: inline-block;padding-left: 10px"><u>mark as read</u></a><a href="" style="display: inline-block;padding-left: 10px"><u>view post</u></a>
+                   </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" id="heading">
+            <label>Share Link(Pop up)</label>
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal">
+                   <div class="form-group">
+                    <label class="control-label col-sm-2" for="link">Link*:</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="link" placeholder="Link">
+                      </div>
+                    </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="description">Description*:</label>
+                      <div class="col-sm-10">
+                     <input type="textarea" class="form-control" id="description" placeholder="Description">
+                      </div>
+                    </div>
+                <div class="form-group">
+                <label class="control-label col-sm-2" for="topic">Topic:*</label>
+                <div class="col-sm-10">
+                    <select class="form-control">
+                        <option>Topic</option>
+                    </select>
+                </div>
+            </div>
+                <div class="form-group"> 
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default" style="background-color: #d9d9d9">Share</button>
+                    <button type="submit" class="btn btn-default" style="background-color: #d9d9d9">Cancel</button>
+                      </div>
+                  </div>
+                  </form>                         
+        </div>
+    </div>
+    <div class="panel panel-default">
+            <div class="panel-heading" id="heading">
+            <label>Share Document(Pop up)</label>
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal">
+                   <div class="form-group">
+                    <label class="control-label col-sm-2" for="document">Document*:</label>
+                      <div class="col-sm-10">
+                <span> <input type="file" id="pwd" value="browse"></span>
+                      </div>
+                    </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="link">Description*:</label>
+                      <div class="col-sm-10">
+                     <input type="textarea" class="form-control" id="description" placeholder="Description">
+                      </div>
+                    </div>
+                <div class="form-group">
+                <label class="control-label col-sm-2" for="topic">Topic:*</label>
+                <div class="col-sm-10">
+                    <select class="form-control">
+                        <option>Topic</option>
+                    </select>
+                </div>
+            </div>
+                <div class="form-group"> 
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default" style="background-color: #d9d9d9">Share</button>
+                    <button type="submit" class="btn btn-default" style="background-color: #d9d9d9">Cancel</button>
+                      </div>
+                  </div>
+                  </form>                         
+        </div>
+    </div>
+    <div class="panel panel-default">
+            <div class="panel-heading" id="heading">
+            <label>Create Topic(Pop up)</label>
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal">
+                   <div class="form-group">
+                    <label class="control-label col-sm-2" for="name">Name*:</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="link" placeholder="Name">
+                      </div>
+                    </div>
+                <div class="form-group">
+                <label class="control-label col-sm-2" for="visibility">Visibility:*</label>
+                <div class="col-sm-10">
+                    <select class="form-control">
+                        <option>Public</option>
+                    </select>
+                </div>
+            </div>
+                <div class="form-group"> 
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default" style="background-color: #d9d9d9">Save</button>
+                    <button type="submit" class="btn btn-default" style="background-color: #d9d9d9">Cancel</button>
+                      </div>
+                  </div>
+                  </form>                         
+        </div>
+    </div>
+<!--//////////////////////////////////////////////////////////  -->
+</div>
+
+<!--  Create Topic Popup  -->
+<div id="myModalCreateTopic" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Create Topic</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Name:*</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="pwd" placeholder="Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Visibility:*</label>
+                <div class="col-sm-10">
+                    <select class="form-control">
+            	        <option>public</option>
+            	        <option>private</option>
+                    </select>
+                </div>
+            </div>
+      </div>
+      <div class="modal-footer">
+        <input type="submit" name="" value="Save" class="btn btn-primary">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--  Send Invitation Popup  -->
+<div id="myModalSendInvitation" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Send Invitation</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Email:*</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="pwd" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Topic:*</label>
+                <div class="col-sm-10">
+                    <select class="form-control">
+            	        <option>Topic1</option>
+            	        <option>Topic2</option>
+                    </select>
+                </div>
+            </div>
+      </div>
+      <div class="modal-footer">
+        <input type="submit" name="" value="Invite" class="btn btn-primary">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--  Share document Popup  -->
+<div id="myModalShareDocument" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Share Document</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Document:*</label>
+                <div class="col-sm-10">
+                    <input type="file" >
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Description:*</label>
+                <div class="col-sm-10">
+                    <textarea rows="50" cols="100" placeholder="description" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Topic:*</label>
+                <div class="col-sm-10">
+                    <select class="form-control">
+                        <option>Topic1</option>
+                        <option>Topic2</option>
+                    </select>
+                </div>
+            </div>
+      </div>
+      <div class="modal-footer">
+        <input type="submit" name="" value="Invite" class="btn btn-primary">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--  Share Link Popup  -->
+<div id="myModalShareLink" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Share Link</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Link:*</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="pwd" placeholder="Link">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Description:*</label>
+                <div class="col-sm-10">
+                    <textarea rows="5" cols="50" placeholder="description" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Topic:*</label>
+                <div class="col-sm-10">
+                    <select class="form-control">
+                        <option>Topic1</option>
+                        <option>Topic2</option>
+                    </select>
+                </div>
+            </div>
+      </div>
+      <div class="modal-footer">
+        <input type="submit" name="" value="Share" class="btn btn-primary">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
