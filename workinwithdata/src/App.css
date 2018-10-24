@@ -1,0 +1,57 @@
+.button-style{
+background-color: rgb(12, 68, 65);
+color:white;
+padding:15px;
+margin-top: 10px;
+margin-left: 20px;
+font-size: 20px;
+}
+.bg-grey {
+background-color: rgb(241, 201, 201);
+}
+
+.user-list {
+margin: 100px 0px 10px 0px;
+padding: 20px;
+float: left;
+text-align: left;
+text-decoration: underline blue;
+text-transform: uppercase;
+font-style: oblique;
+font-family: Arial, Helvetica, sans-serif;
+width: 20%;
+list-style: none;
+background-color:rgb(134, 238, 131);
+}
+
+.user-details {
+margin: 100px 20px 0;
+float: right;
+width: 60%;
+text-align: left;
+padding: 10px;
+border: 1px solid #070707;
+position: relative;
+}
+
+.user-details div label {
+width: 400px;
+margin-right: 50px;
+}
+
+.user-details div input {
+width: 400px;
+}
+.close-icon {
+color: darkred;
+position: absolute;
+top: -10px;
+right: -8px;
+height: 19px;
+width: 19px;
+background-color: #fff;
+border: 1px solid darkred;
+border-radius: 12px;
+text-align: center;
+cursor: pointer;
+}
